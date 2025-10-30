@@ -18,14 +18,15 @@ Span<T> &Span<T>::operator=(const Span &other)
 {
     if (this != &other)
     {
-        _N = other._N;
-        _vec = other._vec;
+        this->_N = other._N;
+        this->_vec = other._vec;
     }
     return *this;
 }
 
 template <typename T>
-Span<T>::~Span() {}
+Span<T>::~Span()
+{}
 
 template <typename T>
 void Span<T>::addNumber(const T &value)
